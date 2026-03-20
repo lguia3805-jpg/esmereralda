@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Los Reyes - Zonas Turísticas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+  background-color: #bba9bb;
+  color: #00ffff;
+}
+
+/* NAVBAR */
+nav {
+  background: #e69dfb;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  color: #23bac4;
+}
+
+/* SECCIONES */
+.seccion {
+  display: none;
+  padding: 100px 20px 50px 20px;
+  min-height: 80vh;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+/* INICIO */
+#inicio {
+  display: block;
+  background: linear-gradient(to bottom, #bba9bb, #bba9bb);
+  color: #ff689d;
+}
+
+/* IMAGENES */
+#imagenes {
+  background-color: #02ac66;
+}
+
+/* VIDEO */
+#video {
+  background-color: #e6ffee;
+}
+
+/* TABLA */
+#tabla {
+  background-color: #ffe6e6;
+}
+
+/* FORMULARIO */
+#contacto {
+  background-color: #e6e6ff;
+}
+
+/* ESTILO GENERAL */
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 300px;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Tabla estilo */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #009999;
+  color: white;
+}
+
+/* Imagenes dentro de tabla */
+td img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* Formulario estilo */
+form {
+  background-color: white;
+  padding: 25px;
+  width: 350px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+  width: 90%;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button.submit-btn {
+  background-color: #009999;
+  color:white;
+  border:none;
+  border-radius:5px;
+  padding:10px 20px;
+  margin-top:10px;
+  cursor:pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button.submit-btn:hover {
+  background-color: #007777;
+}
+
+audio {
+  margin-top: 20px;
+  outline: none;
+}
+</style>
+
+<script>
+function mostrar(seccion){
+  let secciones = document.getElementsByClassName("seccion");
+  for(let i=0;i<secciones.length;i++){
+    secciones[i].style.display="none";
+  }
+  document.getElementById(seccion).style.display="block";
+}
+</script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <button onclick="mostrar('inicio')">Inicio</button>
+  <button onclick="mostrar('imagenes')">Imágenes</button>
+  <button onclick="mostrar('video')">Video</button>
+  <button onclick="mostrar('tabla')">Tabla</button>
+  <button onclick="mostrar('contacto')">Contáctanos</button>
+</nav>
+
+<!-- INICIO -->
+<div id="inicio" class="seccion">
+<h1>Los Reyes</h1>
+<p>Las zonas mas turísticas de Los Reyes: la planta de agua fría, el templo y la plaza de los reyes.</p>
+<audio controls autoplay loop>
+  <source src="audio.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio
+</audio>
+</div>
+
+<!-- IMAGENES -->
+<div id="imagenes" class="seccion">
+<h2>zonas turisticas</h2>
+<img src="../imagenes/foto2.jpeg" alt="Planta de Agua Fría">
+<img src="../imagenes/foto3.jpeg" alt="Planta de agua Fría">
+<img src="../imagenes/foto4.jfif" alt="Parroquia">
+<img src="../imagenes/foto5.webp" alt="Plaza">
+</div>
+
+<!-- VIDEO -->
+<div id="video" class="seccion">
+<h2>paisaje de la planta</h2>
+<video width="500" controls>
+  <source src="video2.mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- TABLA -->
+<div id="tabla" class="seccion">
+<h2>Lugares Turísticos</h2>
+<table>
+<tr>
+<th>Lugar</th>
+<th>Imagen</th>
+<th>Descripción</th>
+</tr>
+<tr>
+<td>Planta de Agua Fría</td>
+<td><img src="../imagenes/foto2.jpeg" alt="Planta de Agua Fría"></td>
+<td>Es un sitio para convivir los fines de semana en familia o los dias de calor.</td>
+</tr>
+<tr>
+<td>Parroquia los santos reyes</td>
+<td><img src="../imagenes/foto4.jfif" alt="Templo"></td>
+<td>es la parroquia de los santos reyes es para misas y tambien para selebrar los dias importantes.</td>
+</tr>
+<tr>
+<td>Plaza</td>
+<td><img src="../imagenes/foto5.webp" alt="Plaza de los Reyes"></td>
+<td>Es un sitio para domingos familiares para pasar el rato estar sentado comiendo una nieve.</td>
+</tr>
+</table>
+</div>
+
+<!-- FORMULARIO -->
+<div id="contacto" class="seccion">
+<h2>Contáctanos</h2>
+<form>
+<input type="text" placeholder="Tu nombre" required><br>
+<input type="email" placeholder="Tu correo" required><br>
+<textarea placeholder="Escribe tu comentario" rows="5"></textarea><br>
+<button type="submit" class="submit-btn">Enviar</button>
+</form>
+</div>
+
+</body>
+</html>
